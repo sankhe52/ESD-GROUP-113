@@ -164,9 +164,12 @@ compare_btn.addEventListener('click', () => {
 								<th class="col">`+car_data[compare_car2]["Name"]+`</th></tr></thead>`;
 			}
 			else if (parameter === "Preview") {
+				if (screen.width < 992) continue;
+				else {
 				datahtml.innerHTML += `<tr><td>`+parameter+`</td>
 										<td><img src="`+car_data[compare_car1][parameter]+`" class="table_img"></td>
-										<td><img src="`+car_data[compare_car2][parameter]+`" class="table_img"></td></tr>`
+										<td><img src="`+car_data[compare_car2][parameter]+`" class="table_img"></td></tr>`;
+				}
 			}
 			else {
 				datahtml.innerHTML += `<tr><td>`+parameter+`</td>
